@@ -1,0 +1,122 @@
+.ds-steps {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-sm);
+  padding: var(--ds-space-4) var(--ds-space-5);
+  min-width: 240px;
+}
+
+.ds-steps-title {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ds-accent-strong);
+  background: var(--ds-accent-soft);
+  border-radius: var(--ds-radius-pill);
+  padding: 6px 12px;
+  width: fit-content;
+  margin-bottom: var(--ds-space-4);
+}
+
+.ds-steps-title-spinner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--ds-accent-soft-border);
+  border-top-color: var(--ds-accent);
+  animation: ds-spin 0.9s linear infinite;
+}
+
+@keyframes ds-spin {
+  to { transform: rotate(360deg); }
+}
+
+.ds-steps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.ds-step {
+  display: flex;
+  gap: var(--ds-space-3);
+  position: relative;
+  padding-bottom: var(--ds-space-4);
+}
+
+.ds-step:last-child {
+  padding-bottom: 0;
+}
+
+.ds-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 22px;
+  bottom: 0;
+  width: 1.5px;
+  background: var(--ds-border);
+}
+
+.ds-step-marker {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background: var(--ds-surface);
+  border: 1.5px solid var(--ds-border);
+  color: var(--ds-text-tertiary);
+}
+
+.ds-step--done .ds-step-marker {
+  background: var(--ds-accent);
+  border-color: var(--ds-accent);
+  color: #ffffff;
+}
+
+.ds-step--done .ds-step-marker svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ds-step--active .ds-step-marker {
+  border-color: var(--ds-accent);
+}
+
+.ds-step-marker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+}
+
+.ds-step-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ds-text-primary);
+}
+
+.ds-step--pending .ds-step-label,
+.ds-step--pending .ds-step-description {
+  color: var(--ds-text-tertiary);
+}
+
+.ds-step-description {
+  font-size: 12.5px;
+  color: var(--ds-text-secondary);
+  margin-top: 2px;
+}
+
+@media (max-width: 960px) {
+  .ds-steps {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+
+> server@1.0.0 dev
+> tsx watch src/server.ts
+
+[DebugSignal] Repository: C:\Users\bhart\OneDrive\Desktop\debug-signal\demo-repository
+DebugSignal API running on http://localhost:5000
+
+
+#
+# Fatal process out of memory: Zone
+#
+----- Native stack trace -----
+
+ 1: 00007FF702AF542D node::SetCppgcReference+17693
+ 2: 00007FF7029C88CF node::TriggerNodeReport+73231
+ 3: 00007FF703C47116 v8::base::FatalOOM+54
+ 4: 00007FF7035CB7D1 v8::Function::Experimental_IsNopFunction+2369
+ 5: 00007FF70309AA8B v8::SnapshotCreator::GetIsolate+52395
+ 6: 00007FF703DD4B65 v8::internal::compiler::CompilationDependencies::TransitionDependencyOffTheRecord+342645
+ 7: 00007FF703DD4C6E v8::internal::compiler::CompilationDependencies::TransitionDependencyOffTheRecord+342910
+ 8: 00007FF703D692A1 v8::internal::compiler::CompilationDependencies::~CompilationDependencies+811473
+ 9: 00007FF703D5FC3A v8::internal::compiler::CompilationDependencies::~CompilationDependencies+772970
+10: 00007FF703C76023 inflateInit2_+104499
+11: 00007FF702F32066 v8::WasmStreaming::Unpack+969494
+12: 00007FF702F3151A v8::WasmStreaming::Unpack+966602
+13: 00007FF702F0C3D1 v8::WasmStreaming::Unpack+814721
+14: 00007FF702F11DEF v8::WasmStreaming::Unpack+837791
+15: 00007FF7037D0515 v8::PropertyDescriptor::writable+1996805
+16: 00007FF7029CB5F0 ENGINE_get_load_privkey_function+784
+17: 00007FF702B55A43 uv_poll_stop+371
+18: 00007FF70435342E inflateValidate+162990
+19: 00007FF9D277CD87 BaseThreadInitThunk+23
+20: 00007FF9D3CCCAEC RtlUserThreadStart+44

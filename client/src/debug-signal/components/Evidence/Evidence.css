@@ -1,0 +1,252 @@
+.ds-evidence {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-evidence-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ds-space-5) var(--ds-space-5) var(--ds-space-4);
+}
+
+.ds-evidence-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ds-accent);
+  padding: 2px;
+}
+
+.ds-evidence-link svg {
+  width: 13px;
+  height: 13px;
+}
+
+.ds-evidence-link:hover {
+  color: var(--ds-accent-strong);
+}
+
+.ds-evidence-body {
+  padding: 0 var(--ds-space-5) var(--ds-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-4);
+}
+
+.ds-evidence-summary {
+  display: flex;
+  gap: var(--ds-space-3);
+  background: linear-gradient(135deg, var(--ds-accent-soft), #fdf6fb);
+  border: 1px solid var(--ds-accent-soft-border);
+  border-radius: var(--ds-radius-md);
+  padding: var(--ds-space-4);
+}
+
+.ds-evidence-summary-icon {
+  color: var(--ds-accent);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.ds-evidence-summary-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-2);
+}
+
+.ds-evidence-summary-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ds-text-primary);
+}
+
+.ds-evidence-confidence {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ds-success);
+  background: var(--ds-success-soft);
+  border-radius: var(--ds-radius-pill);
+  padding: 2px 10px;
+}
+
+.ds-evidence-summary-sub {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--ds-text-secondary);
+}
+
+.ds-evidence-commit {
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-md);
+  padding: var(--ds-space-4);
+  background: var(--ds-surface-sunken);
+}
+
+.ds-evidence-commit-header {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-2);
+}
+
+.ds-evidence-commit-icon {
+  color: var(--ds-text-tertiary);
+  display: flex;
+}
+
+.ds-evidence-commit-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.ds-evidence-commit-meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--ds-space-2);
+  min-width: 0;
+}
+
+.ds-evidence-commit-sha {
+  font-family: var(--ds-font-mono);
+  font-size: 12.5px;
+  color: var(--ds-text-secondary);
+}
+
+.ds-evidence-commit-date {
+  font-size: 12px;
+  color: var(--ds-text-tertiary);
+  white-space: nowrap;
+}
+
+.ds-evidence-commit-message {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ds-text-primary);
+  margin-bottom: var(--ds-space-3);
+}
+
+.ds-evidence-tags {
+  display: flex;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-3);
+}
+
+.ds-evidence-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ds-accent-strong);
+  background: var(--ds-accent-soft);
+  border-radius: var(--ds-radius-sm);
+  padding: 3px 8px;
+}
+
+.ds-diff {
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-sm);
+  overflow: hidden;
+  font-family: var(--ds-font-mono);
+  font-size: 12.5px;
+  margin-bottom: var(--ds-space-3);
+}
+
+.ds-diff-file {
+  padding: 6px 12px;
+  background: var(--ds-surface);
+  color: var(--ds-text-tertiary);
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-diff-line {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  padding: 3px 12px;
+}
+
+.ds-diff-line--remove {
+  background: var(--ds-diff-remove-bg);
+  color: var(--ds-diff-remove-text);
+}
+
+.ds-diff-line--add {
+  background: var(--ds-diff-add-bg);
+  color: var(--ds-diff-add-text);
+}
+
+.ds-diff-line--context {
+  background: var(--ds-surface);
+  color: var(--ds-text-secondary);
+}
+
+.ds-diff-line-number {
+  width: 20px;
+  flex-shrink: 0;
+  color: inherit;
+  opacity: 0.6;
+  text-align: right;
+}
+
+.ds-diff-line-symbol {
+  width: 10px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.ds-diff-line-code {
+  white-space: pre;
+}
+
+.ds-related-commits {
+  border-top: 1px solid var(--ds-border-soft);
+  padding: var(--ds-space-4) var(--ds-space-5) var(--ds-space-5);
+}
+
+.ds-related-commits-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ds-text-primary);
+  margin-bottom: var(--ds-space-3);
+}
+
+.ds-related-commits-list {
+  list-style: none;
+  margin: 0 0 var(--ds-space-3);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-2);
+}
+
+.ds-related-commit {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: var(--ds-space-2);
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+.ds-related-commit-sha {
+  font-family: var(--ds-font-mono);
+  color: var(--ds-accent);
+  font-size: 12px;
+}
+
+.ds-related-commit-message {
+  color: var(--ds-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ds-related-commit-date {
+  color: var(--ds-text-tertiary);
+  font-size: 12px;
+  white-space: nowrap;
+}

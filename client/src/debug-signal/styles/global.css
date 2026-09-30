@@ -1,0 +1,70 @@
+@import "./tokens.css";
+
+.ds-root,
+.ds-root * {
+  box-sizing: border-box;
+}
+
+.ds-root {
+  font-family: var(--ds-font);
+  color: var(--ds-text-primary);
+  background: var(--ds-bg-gradient);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+.ds-root :focus-visible {
+  outline: 2px solid var(--ds-accent);
+  outline-offset: 2px;
+  border-radius: var(--ds-radius-sm);
+}
+
+.ds-root button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.ds-root h1,
+.ds-root h2,
+.ds-root h3,
+.ds-root p {
+  margin: 0;
+}
+
+.ds-scrollarea {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ds-border) transparent;
+}
+
+.ds-scrollarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ds-scrollarea::-webkit-scrollbar-thumb {
+  background: var(--ds-border);
+  border-radius: var(--ds-radius-pill);
+}
+
+.ds-card {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+.ds-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ds-text-primary);
+}
+
+.ds-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

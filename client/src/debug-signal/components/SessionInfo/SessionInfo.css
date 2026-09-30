@@ -1,0 +1,57 @@
+.ds-session-info {
+  padding: var(--ds-space-5);
+}
+
+.ds-session-info-title {
+  margin-bottom: var(--ds-space-4);
+}
+
+.ds-session-info-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-3);
+}
+
+.ds-session-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-3);
+  font-size: 13px;
+}
+
+.ds-session-info-row dt {
+  color: var(--ds-text-tertiary);
+}
+
+.ds-session-info-row dd {
+  margin: 0;
+  color: var(--ds-text-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+.ds-session-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ds-session-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.ds-session-status--investigating .ds-session-status-dot {
+  background: var(--ds-accent);
+}
+
+.ds-session-status--resolved .ds-session-status-dot {
+  background: var(--ds-success);
+}
+
+.ds-session-status--paused .ds-session-status-dot {
+  background: var(--ds-warning);
+}
